@@ -1,0 +1,8 @@
+<use   name="TauAnalysis/ClassicSVfit"/>
+<use   name="roofit"/>
+<use   name="root"/>
+<Flags LDFLAGS="-rdynamic" />
+<Flags ADD_SUBDIR="1"/>
+<export>
+  <lib   name="1"/>
+</export>
