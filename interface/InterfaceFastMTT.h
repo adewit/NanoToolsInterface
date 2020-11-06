@@ -16,8 +16,16 @@ class InterfaceFastMTT{
   void setMetAndCovMat(double metx, double mety, double metxx, double metxy, double metyx, double metyy); 
  
   void clearLeptons();
+  
+  void calcSV();
 
   double getMass();
+
+  double getPt();
+
+  double getEta();
+
+  double getPhi();
 
 
  private:

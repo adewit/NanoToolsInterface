@@ -45,14 +45,31 @@ void InterfaceFastMTT::clearLeptons(){
   measTauLeps.clear();
 }
 
-double InterfaceFastMTT::getMass(){
+void InterfaceFastMTT::calcSV(){
 
   measTauLeps.push_back(lepone);
   measTauLeps.push_back(leptwo);
   
   fastMttInstance.run(measTauLeps, metxval, metyval, covMatr);
 
-  return fastMttInstance.getBestP4().M();
-
 }
+
+
+double InterfaceFastMTT::getMass(){
+  return fastMttInstance.getBestP4().M();
+}
+
+double InterfaceFastMTT::getPt(){
+  return fastMttInstance.getBestP4().Pt();
+}
+
+double InterfaceFastMTT::getEta(){
+  return fastMttInstance.getBestP4().Eta();
+}
+
+double InterfaceFastMTT::getPhi(){
+  return fastMttInstance.getBestP4().Phi();
+}
+
+
 
